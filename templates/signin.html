@@ -1,0 +1,31 @@
+<!doctype html>
+<head><title>Login/Signup</title>
+<link rel="stylesheet" href="{{url_for('static', filename='signin.css') }}">
+      </head>
+<body>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Sign In </h2>
+    <h2 class="underlineHover"><a href="/signin"> Sign Up </a></h2>
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="static/animal.jpg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form action="/logdata" method="post">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="username" required>
+      <input type="password" id="password" class="fadeIn third" name="login_pass" placeholder="password" required>
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="/forgotpassword">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+</body>

@@ -1,0 +1,15 @@
+{% for user in user %}
+<p>
+<tr>
+    <li>
+   <td>{{ user['_id'] }}</td>
+   <td>{{ user['username'] }}</td>
+   <td>{{ user['email'] }}</td>
+   <td>{{ user['password'] }}</td>
+    <td>{{ user['confirm_password'] }}</td>
+    </li>
+</tr>
+</p>
+{{ table }}
+{% endfor %}
+<p><a href="{{ url_for('.home') }}">Return Home</a></p>

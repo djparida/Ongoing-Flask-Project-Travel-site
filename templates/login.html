@@ -1,0 +1,71 @@
+<!doctype html>
+<head><title>Login/Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='logstyle.css')}}">
+    <script>
+
+            // Function to check Whether both passwords
+            // is same or not.
+            function checkPassword(form) {
+                password = form.password.value;
+                password2 = form.password2.value;
+
+                // If password not entered
+                if (password == '')
+                    alert ("Please enter Password");
+
+                // If confirm password not entered
+                else if (password2 == '')
+                    alert ("Please enter confirm password");
+
+                // If Not same return False.
+                else if (password != password2) {
+                    alert ("\nPassword did not match: Please try again...")
+                    return false;
+                }
+
+                // If same return True.
+                else{
+                    alert("Password Match: Welcome to Travel Site!")
+                    return true;
+                }
+            }
+  </script>
+</head>
+<meta charset="UTF-8">
+
+<div id="login-box">
+  <div class="left">
+    <h1 class="active">Sign up</h1>
+    <h1><a href="/login"> Sign In </a></h1>
+    <form onSubmit = "return checkPassword(this)" action="/signup" method="post">
+    <input type="text" name="username" placeholder="Username" />
+    <input type="text" name="email" placeholder="E-mail" />
+    <input id="myInput" type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" />
+    <input type="password" name="password2" placeholder="Retype password"/>
+    <input type="checkbox" onclick="myFunction()">Show Password
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+
+    <input type="submit" name="signup_submit" value="Sign me up" />
+     </form>
+  </div>
+
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+
+    <button class="social-signin facebook">Log in with facebook</button>
+    <button class="social-signin twitter">Log in with Twitter</button>
+    <button class="social-signin google">Log in with Google+</button>
+  </div>
+  <div class="or">OR</div>
+</div>
+

@@ -1,0 +1,217 @@
+<html>
+<head>
+<title>Travelling Website Designed by Easy Tutorials</title>
+<link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+<section class="header">
+<div class="container">
+    <img src="static/2447303.jpg">
+    {% if session['usersession']%}
+    <button type="button" class="login-btn" onclick="window.location.href='/logout'">Logout</button>
+    <button type="button" class="login-btn" onclick="window.location.href='/dashboard'">Dashboard</button>
+    {% else %}
+    <button type="button" class="login-btn" onclick="window.location.href='/login'">Login</button>
+    {% endif %}
+</div>
+<h1>Travel Across The Globe</h1>
+<p>“Travel makes one modest. You see what a tiny place you occupy in the world.”</p>
+<div class="input-group">
+    <input type="text" class="full-control" placeholder="search country or city">
+    <div class="input-group-append">
+    <button type="submit" class="input-group-text btn search.btn">Search</button>
+    </div>
+</div>
+</section>
+<section class="features">
+<h1>Featured Destinations</h1>
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+    <div class="features-box">
+    <div class="feature-img">
+    <img src="static/images/los angeles.jpeg"/>
+        <div class="price"><p>90$</p>
+            </div>
+        <div class="ratings">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+        </div>
+    </div>
+    <div class="feature-details">
+    <h4>Los Angeles</h4>
+    <p>Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry. Near its iconic Hollywood sign, studios such as Paramount Pictures, Universal and Warner Brothers offer behind-the-scenes tours.</p>
+    <div><span><i class="fa fa-map-marker"></i>Los Angeles</span>
+        <span><i class="fa fa-sun-o"></i>4 Days</span>
+        <span><i class="fa fa-moon-o"></i>3 Nights</span>
+    </div>
+    </div>
+    </div>
+</div>
+    <div class="col-md-4">
+    <div class="features-box">
+    <div class="feature-img">
+    <img src="static/Images/london.jpeg">
+        <div class="price"><p>120$</p>
+            </div>
+        <div class="ratings">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+    </div>
+    <div class="feature-details">
+    <h4>London</h4>
+    <p>London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey.</p>
+    <div><span><i class="fa fa-map-marker"></i>London</span>
+        <span><i class="fa fa-sun-o"></i>4 Days</span>
+        <span><i class="fa fa-moon-o"></i>3 Nights</span>
+    </div>
+    </div>
+    </div>
+</div>
+    <div class="col-md-4">
+    <div class="features-box">
+    <div class="feature-img">
+    <img src="static/Images/New%20York.jpeg">
+        <div class="price"><p>86$</p>
+            </div>
+        <div class="ratings">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+        </div>
+    </div>
+    <div class="feature-details">
+    <h4>New York</h4>
+    <p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers.</p>
+    <div><span><i class="fa fa-map-marker"></i>New York</span>
+        <span><i class="fa fa-sun-o"></i>4 Days</span>
+        <span><i class="fa fa-moon-o"></i>3 Nights</span>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="Gallery">
+<h1>Travelling Gallery</h1>
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+    <div class="gallery-box">
+        <img src="static/Images/home.jpeg">
+        <h4>Sydney</h4>
+    </div>
+</div>
+<div class="col-md-3">
+    <div class="gallery-box">
+        <img src="static/Images/japan.jpeg">
+        <h4>Japan</h4>
+    </div>
+</div>
+ <div class="col-md-3">
+    <div class="gallery-box">
+        <img src="static/Images/paris.jpeg">
+        <h4>Paris</h4>
+    </div>
+</div>
+<div class="col-md-3">
+    <div class="gallery-box">
+        <img src="static/Images/pexels-photo-574313.jpeg">
+        <h4>India</h4>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="banner">
+<div class="banner-highlights">
+<div class="container">
+<div class="row">
+<div class="col-md-8">
+<h2>Get 30% Off on Top Destinations</h2>
+    <p>Book your tickets before August and avail 30% flat discount.</p>
+</div>
+<div class="col-md-4">
+<button type="button" class="book-btn">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="user-reviews">
+<h2>User Reviews</h2>
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="user-review">
+<p>Everything is fair in love and war. Our world is very big but when we begin travel world we will find diversity.</p>
+    <h5>Rakesh Sharma</h5>
+    <small>India</small>
+</div>
+    <img src="static/Images/boy1.jpeg">
+</div>
+<div class="col-md-4">
+<div class="user-review">
+<p>Everything is fair in love and war. Our world is very big but when we begin travel world we will find diversity.</p>
+    <h5>Rose Radlcang</h5>
+    <small>San Francisco</small>
+</div>
+    <img src="static/Images/girl1.jpeg">
+</div>
+<div class="col-md-4">
+<div class="user-review">
+<p>Everything is fair in love and war. Our world is very big but when we begin travel world we will find diversity.</p>
+    <h5>Mariya Fedrick</h5>
+    <small>Italy</small>
+</div>
+    <img src="static/Images/girl2.jpeg">
+</div>
+</div>
+</div>
+</section>
+<section class="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<img src="static/2447303.jpg" class="footer-logo">
+    <p>Traveling – it leaves you speechless, then turns you into a storyteller.” – Ibn Battuta</p>
+</div>
+    <div class="col-md-3">
+    <h4>Features</h4>
+        <p>Deals & Offer</p>
+        <p>Customer Reviews</p>
+        <p>Cancellation Policy</p>
+    </div>
+    <div class="col-md-3">
+    <h4>Quick Contacts</h4>
+        <p><i class="fa fa-phone-square"></i> +91 7598958937</p>
+        <p><i class="fa fa-envelope-o"></i> abc@email.com</p>
+        <p><i class="fa fa-home"></i>+ xyz Road, AbC City</p>
+    </div>
+     <div class="col-md-3">
+    <h4>Follow Us On</h4>
+         <p><i class="fa fa-facebook"></i><a href="https://www.facebook.com" style="color:white">Facebook</a></p>
+         <p><i class="fa fa-twitter"></i><a href="https://www.twitter.com" style="color:white">Twitter</a></p>
+         <p><i class="fa fa-instagram"></i><a href="https://www.instagram.com" style="color:white">Instagram</a></p>
+    </div>
+</div>
+    <hr><p class="copyright"> Made with <i class="fa fa-copyright"></i>By<a href="https://www.linkedin.com/in/dibyajyoti-parida-59111b11b" target="_blank" style="color:white">  Mr Dibyajytoi Parida</a> <i class="fa fa-heart"></i></p>
+</div>
+</section>
+
+</body>
+</html>

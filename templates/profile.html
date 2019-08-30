@@ -1,0 +1,17 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+{% block body %}
+<h2>My info are {{ data }}</h2>
+
+<p><li>My id are <code>{{ data['_id'] }}</code></li></p>
+<p><li>My name is <code>{{ data['name'] }}</code></li></p>
+<p><li>My email is <code>{{ data['email'] }}</code></li></p>
+<p><li>My mob number is <code>{{ data['mob'] }}</code></li></p>
+<p><li>My gender is <code>{{ data['gender'] }}</code></li></p>
+<p><li>My address is <address></address><code>{{ data['address'] }}</code></li></p>
+<p><li>My Image file- <code>{{ data['image'] }}</code></li></p>
+
+{% endblock %}
+<p><a href="{{ url_for('.home') }}">Return Home</a></p>

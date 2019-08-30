@@ -1,0 +1,18 @@
+
+<!doctype html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+{% block body %}
+<h1>Welcome to User Dashboard</h1>
+<div class="col-sm-8 offset-sm-2">
+<!--<h2>My info are {{ user }}</h2>-->
+<h2>My info are {{ rel }}</h2>
+    <li><p>My id is <code>{{ user['_id'] }}</code></p></li>
+    <li> <p>My Name is <code>{{ user['username'] }}</code></p></li>
+    <li><p>My Mail Id is <code>{{ user['email'] }}</code></p></li>
+</div>
+{% endblock %}
+<p><a href="{{ url_for('.home') }}">Return Home</a></p>
+<p><a href="{{ url_for('.editprofile')}}"> Edit Profile </a></p>
+
